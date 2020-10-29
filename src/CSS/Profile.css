@@ -1,0 +1,57 @@
+#profile-title {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective-origin: 50% 50%;
+  }
+  
+  #profile-pic{
+    text-align: center;
+    margin: auto auto;
+  }
+  
+  #profile-pic
+  img
+  {
+    border-radius: 15%;
+    /* border: #61892F solid 6px; */
+    height: 300px;
+    width: 200px;
+    min-width: 200px;
+    margin: auto;
+  }
+  
+  .article {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective-origin: 50% 50%;
+    display: block;
+    min-width: 300px;
+    font-size: large;
+  }
+  
+  #paragraph{
+    margin: 50px;
+  }
+  
+  /* resume */
+  
+  #resume-div{
+    text-align: center;
+  }
+  
+  #resume-link{
+    font-size: x-large;
+  }
+  
+  #about{
+    padding-top: 50px;
+    margin: 40px;
+  }
+
+  #profile-parent{
+    background-color: #56606a;
+  }

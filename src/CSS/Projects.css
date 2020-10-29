@@ -1,0 +1,12 @@
+#project-div{
+    background-color: #343a40;
+}
+
+#projects{
+}
+
+.project{
+    height: 200px;
+    width: 200px;
+    margin: 5%;
+}
