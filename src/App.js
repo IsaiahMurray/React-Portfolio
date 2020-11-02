@@ -111,7 +111,6 @@ class App extends Component {
 
         <Jumbo />
         <Profile />
-        <Skills />
         <Projects />
         <Form />
         <Footer />

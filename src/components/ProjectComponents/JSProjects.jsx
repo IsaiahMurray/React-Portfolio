@@ -1,16 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { jssPreset, makeStyles } from "@material-ui/core/styles";
 import Zoom from "@material-ui/core/Zoom";
 import ProjectCard from "./ProjectCard";
 import Paper from "@material-ui/core/Paper";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import Box from '@material-ui/core/Box';
+
+//image imports
+import nyt from '../../assets/nyt.jfif'
+import ghibli from '../../assets/ghibli.jpg'
+import clock from '../../assets/clock.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,18 +32,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const projectOne = {
-  title: "Project One",
-  description: "First Project",
-  image: "image-url",
-  code: "code-link",
-  page: "page-link",
+const ghibliProject = {
+  title: "Ghibli API Fetch",
+  description: "A simple fetch from the Studio Ghibli API to display a list of all of their movies",
+  image: ghibli,
+  code: "https://github.com/IsaiahMurray/Stufio-Ghibli-API",
+  page: "https://isaiahmurray.github.io/Stufio-Ghibli-API/",
 };
+
+const nytProject = {
+  title: 'NYT API Fetch',
+  description: 'A small application to search through the NYT with keywords and specific dates.',
+  image: nyt,
+  code: 'https://github.com/IsaiahMurray/NYT-API',
+  page: 'https://isaiahmurray.github.io/NYT-API/'
+}
+
+const JsClock = {
+  title: "JS Clock",
+  description: 'A a real-time clock made with simple JS DOM manipulation.',
+  code: 'https://codepen.io/Salvation205/pen/mdVqKZy',
+  image: clock,
+}
 
 const JSProjects = () => {
   const classes = useStyles();
-  const handleOpen = () => {};
-  const handleClose = () => {};
   return (
     <div>
       <div className={classes.container}>
@@ -54,31 +65,7 @@ const JSProjects = () => {
 
         <Zoom in={true} mountOnEnter unmountOnExit>
           <Paper elevation={4} className={classes.paper}>
-            <Card className={classes.card}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image="https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                  title="Contemplative Reptile"
-                />
-                <CardContent onMouseOver={handleOpen}>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  ></Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  ></Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary"></Button>
-                <Button size="small" color="primary"></Button>
-              </CardActions>
-            </Card>
+            <ProjectCard {...ghibliProject}/>
           </Paper>
         </Zoom>
 
@@ -89,7 +76,7 @@ const JSProjects = () => {
           unmountOnExit
         >
           <Paper elevation={4} className={classes.paper}>
-            <ProjectCard />
+            <ProjectCard {...nytProject} />
           </Paper>
         </Zoom>
 
@@ -100,7 +87,7 @@ const JSProjects = () => {
           unmountOnExit
         >
           <Paper elevation={4} className={classes.paper}>
-            <ProjectCard projectOne={projectOne} />
+            <ProjectCard {...JsClock}/>
           </Paper>
         </Zoom>
         </Box>

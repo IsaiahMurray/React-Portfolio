@@ -87,7 +87,6 @@ const Form = () => {
                   required
                   fullWidth
                   label="First Name"
-                  autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -109,7 +108,6 @@ const Form = () => {
                   variant="outlined"
                   fullWidth
                   label="Phone Number"
-                  autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>

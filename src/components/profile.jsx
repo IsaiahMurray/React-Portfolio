@@ -1,12 +1,13 @@
 import React from "react";
 import isaiah from "../assets/IsaiahMurray1.jpg";
+import Skills from './Skills';
 
 const Profile = () => {
   return (
     <div id="profile-parent">
       <section id="about" className="">
         <div>
-          <h1 id="profile-title">Profile</h1>
+          <h1 id="profile-title">About Me</h1>
         </div>
 
         <div className="container-fluid d-flex row">
@@ -41,6 +42,8 @@ const Profile = () => {
               Checkout my Resume
             </a>
           </div>
+          <br />
+          <Skills />
           <br />
         </section>
       </section>
