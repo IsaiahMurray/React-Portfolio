@@ -88,18 +88,18 @@ const ProjectCard = (props) => {
       </CardActionArea>
       {props.code ?  <CardActions>
         {props.page ? 
-        <Button href={props.page} size="small" color="primary">
+        <Button target="_blank" href={props.page} size="small" color="primary">
           Page link
         </Button> : ''}
-        <Button href={props.code} size="small" color="primary">
+        <Button target="_blank" href={props.code} size="small" color="primary">
           code link
         </Button>
       </CardActions> :
       <CardActionArea>
-        <Button href={props.client} size="small" color="primary">
+        <Button target="_blank" href={props.client} size="small" color="primary">
           Client code
         </Button>
-        <Button href={props.server} size="small" color="primary">
+        <Button target="_blank" href={props.server} size="small" color="primary">
           Server code
         </Button>
       </CardActionArea>

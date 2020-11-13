@@ -11,9 +11,6 @@ import JSProjects from "./JSProjects";
 import OtherProjects from "./OtherProjects";
 import CSProjects from "./CSProjects";
 
-//Next up => Try to change the view of the projects container based upon the state of each radio selctor
-// views = JS, C#, HTML/CSS
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
