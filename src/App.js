@@ -6,9 +6,8 @@ import Particles from "react-tsparticles";
 //imports
 import Nav from "./components/Nav";
 import Jumbo from "./components/Jumbo";
-import Skills from "./components/Skills";
 import Profile from "./components/Profile";
-import Projects from './components/ProjectComponents/Projects';
+import Projects from "./components/ProjectComponents/Projects";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 
@@ -91,7 +90,7 @@ class App extends Component {
                   enable: true,
                   value_area: 800,
                 },
-                value: 0 /*change to 80*/,
+                value: 80 /*change to 80*/,
               },
               opacity: {
                 value: 0.5,
@@ -108,15 +107,11 @@ class App extends Component {
           }}
         />
         <Nav />
-
         <Jumbo />
         <Profile />
         <Projects />
         <Form />
         <Footer />
-        {/* <div id='snow-bg' className='snow-bg'>
-          <h1>Where it at doe</h1>
-        </div> */}
       </div>
     );
   }
