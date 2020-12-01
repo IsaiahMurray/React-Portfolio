@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-tsparticles";
 
 //imports
-import Nav from "./components/Nav";
+import Nav from './components/Nav';
 import Jumbo from "./components/Jumbo";
 import Profile from "./components/Profile";
 import Projects from "./components/ProjectComponents/Projects";

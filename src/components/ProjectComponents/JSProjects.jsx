@@ -1,5 +1,5 @@
 import React from "react";
-import { jssPreset, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "@material-ui/core/Zoom";
 import ProjectCard from "./ProjectCard";
 import Paper from "@material-ui/core/Paper";
