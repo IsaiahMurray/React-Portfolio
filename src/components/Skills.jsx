@@ -8,11 +8,11 @@ import {
   FaDatabase,
   FaNodeJs,
 } from "react-icons/fa";
+import { SiTypescript, SiJavascript } from "react-icons/si";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
-import SvgIcon from '@material-ui/core/SvgIcon';
-import TS from '../assets/typescript.svg';
+
 const Skills = () => {
   return (
     <div>
@@ -41,6 +41,16 @@ const Skills = () => {
           <FaGitAlt size="50px" color="white" />
         </IconButton>
       </Tooltip>
+      <Tooltip title="JavaScript" arrow>
+        <IconButton aria-label="JavaScript">
+          <SiJavascript size="50px" color="white" />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title="TypeScript" arrow>
+        <IconButton aria-label="TypeScript">
+          <SiTypescript size="50px" color="white" />
+        </IconButton>
+      </Tooltip>
       <Tooltip title="Node JS" arrow>
         <IconButton aria-label="Node JS">
           <FaNodeJs size="50px" color="white" />
@@ -51,16 +61,11 @@ const Skills = () => {
           <FaReact size="50px" color="white" />
         </IconButton>
       </Tooltip>
-      <Tooltip title="C Sharp" arrow>
-        <IconButton aria-label="C Sharp">
+      <Tooltip title="C#/Asp.Net" arrow>
+        <IconButton aria-label="C#/Asp.Net">
           <FaDatabase size="50px" color="white" />
         </IconButton>
       </Tooltip>
-      <IconButton aria-label="delete">
-  <SvgIcon>
-    {TS}
-  </SvgIcon>
-</IconButton>
     </div>
   );
 };
