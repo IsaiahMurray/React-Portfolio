@@ -1,6 +1,6 @@
 import React from "react";
 import isaiah from "../assets/IsaiahMurray1.jpg";
-import Skills from './Skills';
+import Skills from "./Skills";
 
 const Profile = () => {
   return (
@@ -21,11 +21,14 @@ const Profile = () => {
               am very new to the technology industry. Previously, I was an
               aspiring chef, but I decided to change my career and explore the
               joys of development. I went through Eleven Fifty Academy's
-              immersive 12 week long bootcamp for both Javascript and Software Engineerin with C#, and
-              am now a Learning Assistant for the JavaScript cohorts! I am
-              striving to become skillful fullstack developer and potentially transfer into
-              video game development. My end goal dream job would be to work
-              with augmented/virtual reality applications and software.
+              immersive 12 week long bootcamp for both Javascript and Software
+              Engineerin with C#, and am now a Learning Assistant for the
+              JavaScript cohorts! I primarily help our students debug their
+              code, and provide additional mini lessons and any resources they
+              may need to benefit their projects. I am striving to become
+              skillful fullstack developer and potentially transfer into video
+              game development. My end goal dream job would be to work with
+              augmented/virtual reality applications and software.
             </p>
           </div>
         </div>
