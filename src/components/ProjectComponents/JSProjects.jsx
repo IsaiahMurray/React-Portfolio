@@ -64,6 +64,7 @@ const WorkoutLog = {
   title: "Workout log",
   description: "An application to track your workouts(Only server currently)",
   image: workout,
+  client: "https://github.com/IsaiahMurray/Workout-log-client",
   server: "https://github.com/IsaiahMurray/Work-out-log-server",
 };
 
