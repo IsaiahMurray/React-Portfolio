@@ -61,8 +61,8 @@ const Skills = () => {
           <FaReact size="50px" color="white" />
         </IconButton>
       </Tooltip>
-      <Tooltip title="C#/Asp.Net" arrow>
-        <IconButton aria-label="C#/Asp.Net">
+      <Tooltip title="C Sharp" arrow>
+        <IconButton aria-label="C Sharp">
           <FaDatabase size="50px" color="white" />
         </IconButton>
       </Tooltip>

@@ -42,7 +42,7 @@ const elevenNoteProject = {
 const colossalSounds = {
   title: "Colossal Sounds",
   description:
-    "A database management app for a store owner, in this instance an instrument music store, that can also function as a way for customers to view products available for sale at the store, and their essential information.",
+    "A database management app for a music store owner that can also function as a way for customers to view products available for sale at the store, and their essential information.",
   code: "https://github.com/IsaiahMurray/Colossal-sounds",
   image: sounds,
 };
