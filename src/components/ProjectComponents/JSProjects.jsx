@@ -62,7 +62,7 @@ const JsClock = {
 
 const WorkoutLog = {
   title: "Workout log",
-  description: "An application to track your workouts(Only server currently)",
+  description: "An application to track your workouts(Not yet deployed)",
   image: workout,
   client: "https://github.com/IsaiahMurray/Workout-log-client",
   server: "https://github.com/IsaiahMurray/Work-out-log-server",
