@@ -14,19 +14,22 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   paper: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(3),
     padding: theme.spacing(2),
     textAlign: "center",
+    justifyContent: "center",
     color: theme.palette.text.secondary,
   },
   container: {
     display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center"
   },
   card: {
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 160,
   },
 }));
 

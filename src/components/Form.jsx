@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   background: {
     backgroundColor: '#343a40',
+  },
+  container: {
+    backgroundColor: "white",
   }
 }));
 
@@ -65,7 +68,7 @@ const Form = () => {
 
   return (
     <div className={classes.background}>
-      <Container id="form-container" component="main" maxWidth="xs">
+      <Container id="form-container" component="main" maxWidth="xs" className={classes.container}>
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
