@@ -42,8 +42,7 @@ const OtherProjects = () => {
   return (
     <div>
     <div className={classes.container}>
-      <Box display="flex"
-      flexWrap="wrap" >
+      <Box display="flex" flexWrap="wrap" justifyContent="center" >
 
       <Zoom in={true} mountOnEnter unmountOnExit>
         <Paper elevation={4} className={classes.paper}>

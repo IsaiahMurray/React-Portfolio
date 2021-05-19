@@ -26,9 +26,6 @@ const Nav = () => {
             <a className="nav-item nav-link js-scroll-trigger" href="#about">
               About
             </a>
-            <a className="nav-item nav-link" href="#skills">
-              Skills
-            </a>
             <a className="nav-item nav-link" href="#project-div">
               Projects
             </a>
