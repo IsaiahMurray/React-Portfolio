@@ -12,6 +12,10 @@ import clock from "../../assets/clock.png";
 import workout from "../../assets/workout.jpg";
 import isaiah from "../../assets/react.jpg";
 import mhw from "../../assets/mhw.jpg";
+import pip from "../../assets/pip.png";
+import scroll from "../../assets/scroll.png";
+import quotes from "../../assets/quotes.png"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,6 +91,30 @@ const HCA = {
   server: "https://github.com/IsaiahMurray/HCAtest-server",
 };
 
+const PIP = {
+  title: "Picture in Picture",
+  description: "An app that will let you share a specific screen on your computer, then be able to move and resize it as needed",
+  image: pip,
+  client: "https://github.com/IsaiahMurray/Picture-In-Picture",
+  code: "https://github.com/IsaiahMurray/Picture-In-Picture",
+}
+
+const Infinite = {
+  title: "Infinite Picture Scroll",
+  description: "This is a project that will let you endlessly scroll through random picture from the Unsplash API",
+  image: scroll,
+  client: "https://isaiahmurray.github.io/Unsplash-Infinite-Scroll/",
+  code: "https://github.com/IsaiahMurray/Unsplash-Infinite-Scroll"
+}
+
+const Quotes = {
+  title: "Quotes Generator",
+  description: "An app that will generate random quotes!",
+  image: quotes,
+  client: "https://github.com/IsaiahMurray/Quote-Generator",
+  code: "https://github.com/IsaiahMurray/Quote-Generator"
+}
+
 const JSProjects = () => {
   const classes = useStyles();
   return (
@@ -133,7 +161,7 @@ const JSProjects = () => {
           </Zoom>
 
           <Zoom
-            style={{ transitionDelay: " 500ms" }}
+            style={{ transitionDelay: " 400ms" }}
             in={true}
             mountOnEnter
             unmountOnExit
@@ -144,13 +172,45 @@ const JSProjects = () => {
           </Zoom>
 
           <Zoom
-            style={{ transitionDelay: " 400ms" }}
+            style={{ transitionDelay: " 500ms" }}
             in={true}
             mountOnEnter
             unmountOnExit
           >
             <Paper elevation={4} className={classes.paper}>
               <ProjectCard {...Portfolio} />
+            </Paper>
+          </Zoom>
+
+          <Zoom
+            style={{ transitionDelay: " 600ms" }}
+            in={true}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Paper elevation={4} className={classes.paper}>
+              <ProjectCard {...PIP} />
+            </Paper>
+          </Zoom>
+
+          <Zoom
+            style={{ transitionDelay: " 700ms" }}
+            in={true}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Paper elevation={4} className={classes.paper}>
+              <ProjectCard {...Infinite} />
+            </Paper>
+          </Zoom>
+          <Zoom
+            style={{ transitionDelay: " 800ms" }}
+            in={true}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Paper elevation={4} className={classes.paper}>
+              <ProjectCard {...Quotes} />
             </Paper>
           </Zoom>
         </Box>
