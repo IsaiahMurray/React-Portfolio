@@ -7,10 +7,10 @@ import Particles from "react-tsparticles";
 import Nav from './components/Nav';
 import Jumbo from "./components/Jumbo";
 import Profile from "./components/Profile";
-import Projects from "./components/ProjectComponents/Projects";
+import Projects from "./components/ProjectComponents/Projects.jsx";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
-
+ 
 class App extends Component {
   render() {
     return (
