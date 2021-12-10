@@ -10,6 +10,7 @@ import note from "../../assets/notepad.png";
 import sounds from "../../assets/sounds.png";
 import LC from '../../assets/LC.png';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

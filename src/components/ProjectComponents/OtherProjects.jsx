@@ -2,11 +2,21 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "@material-ui/core/Zoom";
 import ProjectCard from "./ProjectCard";
-import Paper from "@material-ui/core/Paper";
-import Box from '@material-ui/core/Box';
+
+import {
+  Button,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Typography,
+  Card,
+  Box,
+  Paper,
+  IconButton,
+} from "@material-ui/core";
 
 //image import
-import sharingan from '../../assets/sharingan.png'
+import sharingan from "../../assets/sharingan.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   card: {
     maxWidth: 345,
@@ -34,49 +44,55 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sharinganProject = {
-  title: 'Transforming Sharingan',
-  description: 'A fun little CSS project I did for my gold badge at Eleven Fifty Academy. I am a big Naruto fan so I really wanted to do this one.',
-  code: 'https://codepen.io/Salvation205/pen/QWypRVY',
+  title: "Transforming Sharingan",
+  description:
+    "A fun little CSS project I did for my gold badge at Eleven Fifty Academy. I am a big Naruto fan so I really wanted to do this one.",
+  code: "https://codepen.io/Salvation205/pen/QWypRVY",
   image: sharingan,
-}
+};
 
 const OtherProjects = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   const classes = useStyles();
   return (
     <div>
-    <div className={classes.container}>
-      <Box display="flex" flexWrap="wrap" justifyContent="center" >
-
+      <div className={classes.container}>
+        <Box display="flex" flexWrap="wrap" justifyContent="center">
+          {/* 
       <Zoom in={true} mountOnEnter unmountOnExit>
         <Paper elevation={4} className={classes.paper}>
           <ProjectCard {...sharinganProject}/>
         </Paper>
-      </Zoom>
-
-      {/* <Zoom
-        style={{ transitionDelay: " 100ms" }}
-        in={true}
-        mountOnEnter
-        unmountOnExit
-      >
-        <Paper elevation={4} className={classes.paper}>
-          <ProjectCard />
-        </Paper>
-      </Zoom>
-
-      <Zoom
-        style={{ transitionDelay: " 200ms" }}
-        in={true}
-        mountOnEnter
-        unmountOnExit
-      >
-        <Paper elevation={4} className={classes.paper}>
-          <ProjectCard />
-        </Paper>
       </Zoom> */}
-      </Box>
+
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="140"
+              image={sharingan}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Name
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Description
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Page</Button>
+              <Button size="small">Client Repo</Button>
+              <Button size="small">Server Repo</Button>
+            </CardActions>
+          </Card>
+        </Box>
+      </div>
     </div>
-  </div>
   );
 };
 

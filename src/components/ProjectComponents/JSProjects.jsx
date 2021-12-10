@@ -115,6 +115,22 @@ const Quotes = {
   code: "https://github.com/IsaiahMurray/Quote-Generator"
 }
 
+const LD = {
+
+}
+
+const PiP = {
+
+}
+
+const JokeTeller = {
+
+}
+
+const Animations = {
+  
+}
+
 const JSProjects = () => {
   const classes = useStyles();
   return (
