@@ -44,8 +44,7 @@ const Projects = () => {
 
   useEffect(() => {
     projectDisplay();
-    console.log(jsArr)
-  }, [])
+  },[])
   
 const projectDisplay = () => {
   for(let i = 0; i < projectsFile.length; i++){

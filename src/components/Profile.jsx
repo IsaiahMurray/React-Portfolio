@@ -23,8 +23,8 @@ const Profile = () => {
               immersive 12 week long bootcamp for Web Development using
               Javascript and Software Engineering using C#, and am now an
               Instructor Trainee for the Web Dev cohorts! I am striving to
-              become a skillful, fullstack developer, and further learning
-              into video game development. Please take a look at my
+              become a skillful, fullstack developer, and further my learning
+              into video game development. Please take a look at my work!
             </p>
           </div>
         </div>

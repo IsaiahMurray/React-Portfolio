@@ -55,7 +55,7 @@ const Projects = [
     description:
       "This is the portfolio that you are currently viewing, made using React!",
     image: isaiah,
-    code: "https://github.com/IsaiahMurray/React-Portfolio",
+    repo: "https://github.com/IsaiahMurray/React-Portfolio",
     tags: ["HTML/CSS", "JavaScript", "React"],
     type: "JavaScript"
   },
