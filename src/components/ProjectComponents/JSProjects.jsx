@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate(-50%, -50%)",
     width: 600,
     padding: 25,
-    height: 450
+    height: 450,
   },
 }));
 
