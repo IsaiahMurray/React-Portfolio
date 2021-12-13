@@ -4,20 +4,15 @@ import {
   Zoom,
   Paper,
   Box,
-  Backdrop,
   Modal,
   Button,
   Fade,
   Typography,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
-  Popover,
-} from "@material-ui/core/";
-import ProjectCard from "./ProjectCard";
-import projects from "./projectsFile";
+} from "@mui/material/";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,33 +46,21 @@ const useStyles = makeStyles((theme) => ({
   content: {
     height: 75,
   },
- 
 }));
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 600,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  padding: 5,
+  borderRadius: 5
+  
 };
-
-{
-  /* <Zoom
-style={{ transitionDelay: " 100ms" }}
-in={true}
-mountOnEnter
-unmountOnExit
->
-<Paper elevation={4} className={classes.paper}>
-  <ProjectCard {...nytProject} />
-</Paper>
-</Zoom> */
-}
 
 const JSProjects = (props) => {
   const classes = useStyles();
@@ -89,13 +72,14 @@ const JSProjects = (props) => {
 
     return props.projects.map((project, index) => {
       return (
+        <div>
         <Zoom
           style={{ transitionDelay: `${index}00ms` }}
           in={true}
           mountOnEnter
           unmountOnExit
         >
-          <Paper elevation={4} className={classes.paper}>
+          <Paper elevation={4} className={classes.paper} >
             <Card className={classes.rootTwo}>
               <CardActionArea>
                 <CardMedia
@@ -108,10 +92,30 @@ const JSProjects = (props) => {
                     {project.title}
                   </Typography>
                 </CardContent>
+                <Button onClick={handleOpen}>Details</Button>
               </CardActionArea>
             </Card>
           </Paper>
         </Zoom>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <Typography id="transition-modal-title" variant="h6" component="h2">
+              Text in a modal
+            </Typography>
+            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            </Typography>
+          </Box>
+        </Fade>
+      </Modal>
+
+        </div>
       );
     });
   };

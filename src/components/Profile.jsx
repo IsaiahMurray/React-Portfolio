@@ -38,7 +38,7 @@ const Profile = () => {
               target="_blank"
               href="https://docs.google.com/document/d/1_TNASbp7SEmYv_9rTQ9VHlP3bna_KMn8oVK_Fiv9nXg/edit?usp=sharing"
             >
-              Checkout my Resume
+              My Resume
             </a>
           </div>
           <br />
