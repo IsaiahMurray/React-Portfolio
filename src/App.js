@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Particles
+        {/* <Particles
           id="tsparticles"
           options={{
             background: {
@@ -90,7 +90,7 @@ class App extends Component {
                   enable: true,
                   value_area: 800,
                 },
-                value: 80 /*change to 80*/,
+                value: 80,
               },
               opacity: {
                 value: 0.5,
@@ -105,7 +105,7 @@ class App extends Component {
             },
             detectRetina: true,
           }}
-        />
+        /> */}
         <Nav />
         <Jumbo />
         <Profile />
