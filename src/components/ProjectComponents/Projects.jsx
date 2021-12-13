@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
@@ -10,6 +10,7 @@ import Box from "@material-ui/core/Box";
 import JSProjects from "./JSProjects";
 import OtherProjects from "./OtherProjects";
 import CSProjects from "./CSProjects";
+import projectsFile from './projectsFile';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,8 +35,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Projects = () => {
+  
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [jsArr, setJsArr] = useState([]);
+  const [csArr, setCsArr] = useState([]);
+  const [otherArr, setOtherArr] = useState([]);
+
+  useEffect(() => {
+    projectDisplay();
+    console.log(jsArr)
+  }, [])
+  
+const projectDisplay = () => {
+  for(let i = 0; i < projectsFile.length; i++){
+    if(projectsFile[i].type === "JavaScript"){
+      jsArr.push(projectsFile[i])
+    } else if(projectsFile[i].type === ".Net"){
+      csArr.push(projectsFile[i])
+    } else{
+      otherArr.push(projectsFile[i])
+    }
+  }  
+}
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -74,6 +97,8 @@ const Projects = () => {
     };
   }
 
+  
+
   return (
     <div id="project-div" className={classes.root}>
       <Container className={classes.coloringTwo}>
@@ -86,15 +111,15 @@ const Projects = () => {
         </AppBar>
         
         <TabPanel value={value} index={0}>
-          <JSProjects />
+          <JSProjects projects={jsArr}/>
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <CSProjects />
+          <CSProjects projects={csArr}/>
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <OtherProjects />
+          <OtherProjects projects={otherArr}/>
         </TabPanel>
       </Container>
     </div>
