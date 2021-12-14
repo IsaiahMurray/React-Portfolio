@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Particles
+        <Particles
           id="tsparticles"
           options={{
             background: {
@@ -105,7 +105,7 @@ class App extends Component {
             },
             detectRetina: true,
           }}
-        /> */}
+        />
         <Nav />
         <Jumbo />
         <Profile />

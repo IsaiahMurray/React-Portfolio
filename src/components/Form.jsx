@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   background: {
     backgroundColor: '#343a40',
+    marginTop: '-40px',
   },
   container: {
     backgroundColor: "white",
