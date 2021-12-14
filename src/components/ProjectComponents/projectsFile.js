@@ -11,6 +11,7 @@ import sharingan from "../../assets/sharingan.png";
 import note from "../../assets/notepad.png";
 import sounds from "../../assets/sounds.png";
 import LC from '../../assets/LC.png';
+import book from '../../assets/read-book.png';
 
 const Projects = [
   {
@@ -21,6 +22,16 @@ const Projects = [
     repo: "https://github.com/IsaiahMurray/Stufio-Ghibli-API",
     page: "https://isaiahmurray.github.io/Stufio-Ghibli-API/",
     tags: ["HTML/CSS", "JavaScript"],
+    type: "JavaScript"
+  },
+  {
+    title: "Journal",
+    description: "A React app to create and manage your own journal entries. Currently in version two! For version three, I plan to add filtering/search functionality, and a more dynamic layout for the journal display!",
+    image: book,
+    page: "https://ism-journal-client.herokuapp.com/",
+    client: "https://github.com/IsaiahMurray/Journal-Client",
+    server: "https://github.com/IsaiahMurray/Journal-Server",
+    tags: ["HTML/CSS", "React", "JavaScript", "Node", "PostgreSQL"],
     type: "JavaScript"
   },
   {
@@ -82,7 +93,7 @@ const Projects = [
     title: "Quotes Generator",
     description: "An app that will generate random quotes!",
     image: quotes,
-    page: "https://github.com/IsaiahMurray/Quote-Generator",
+    page: "https://isaiahmurray.github.io/Quote-Generator/",
     repo: "https://github.com/IsaiahMurray/Quote-Generator",
     tags: ["HTML/CSS", "JavaScript"],
     type: "JavaScript"
