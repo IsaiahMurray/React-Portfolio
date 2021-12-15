@@ -11,27 +11,29 @@ import sharingan from "../../assets/sharingan.png";
 import note from "../../assets/notepad.png";
 import sounds from "../../assets/sounds.png";
 import LC from '../../assets/LC.png';
-import book from '../../assets/read-book.png';
+import journal from '../../assets/read-book.jpg';
+import bookmark from '../../assets/bookmark.jpg'
+import animation from '../../assets/animation.png'
 
 const Projects = [
+  {
+    title: "Journal",
+    description: "A React app to create and manage your own journal entries. Currently in version two! For version three, I plan to add filtering/search functionality, and a more dynamic layout for the journal display!",
+    image: journal,
+    page: "https://ism-journal-client.herokuapp.com/",
+    client: "https://github.com/IsaiahMurray/Journal-Client",
+    server: "https://github.com/IsaiahMurray/Journal-Server",
+    tags: ["HTML/CSS", "React", "JavaScript", "Node", "PostgreSQL"],
+    type: "JavaScript"
+  },
   {
     title: "Ghibli API Fetch",
     description:
       "A simple fetch from the Studio Ghibli API to display a list of all of their movies",
     image: ghibli,
     repo: "https://github.com/IsaiahMurray/Stufio-Ghibli-API",
-    page: "https://isaiahmurray.github.io/Stufio-Ghibli-API/",
+    page: "https://isaiahmurray.github.io/Studio-Ghibli-API/",
     tags: ["HTML/CSS", "JavaScript"],
-    type: "JavaScript"
-  },
-  {
-    title: "Journal",
-    description: "A React app to create and manage your own journal entries. Currently in version two! For version three, I plan to add filtering/search functionality, and a more dynamic layout for the journal display!",
-    image: book,
-    page: "https://ism-journal-client.herokuapp.com/",
-    client: "https://github.com/IsaiahMurray/Journal-Client",
-    server: "https://github.com/IsaiahMurray/Journal-Server",
-    tags: ["HTML/CSS", "React", "JavaScript", "Node", "PostgreSQL"],
     type: "JavaScript"
   },
   {
@@ -101,7 +103,7 @@ const Projects = [
   {
     title: "Bookmark-Keeper",
     description: "A custom page to save your bookmarks",
-    image: "",
+    image: bookmark,
     page: "https://isaiahmurray.github.io/Bookmark-Keeper/",
     repo: "https://github.com/IsaiahMurray/Bookmark-Keeper",
     tags: ["HTML/CSS", "JavaScript"],
@@ -110,7 +112,7 @@ const Projects = [
   {
     title: "Animated Page",
     description: "A highly animated page made using tailwind css",
-    image: "",
+    image: animation,
     page: "https://isaiahmurray.github.io/Animated-Template/",
     repo: "https://github.com/IsaiahMurray/Animated-Template",
     tags: ["HTML/CSS"],

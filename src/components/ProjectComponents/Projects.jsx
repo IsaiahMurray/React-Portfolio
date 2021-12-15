@@ -14,8 +14,6 @@ import projectsFile from './projectsFile';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
   },
   paper: {
     margin: theme.spacing(1),
@@ -37,12 +35,13 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   
   const classes = useStyles();
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState();
   const [jsArr, setJsArr] = useState([]);
   const [csArr, setCsArr] = useState([]);
   const [otherArr, setOtherArr] = useState([]);
 
   useEffect(() => {
+    setValue(0);
     projectDisplay();
   },[])
   
@@ -100,6 +99,7 @@ const projectDisplay = () => {
 
   return (
     <div id="project-div" className={classes.root}>
+      <h1>My Work</h1>
       <Container className={classes.coloringTwo}>
         <AppBar className={classes.coloring} position="static">
           <Tabs value={value} onChange={handleChange} centered indicatorColor='primary'>
