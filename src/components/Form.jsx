@@ -1,6 +1,13 @@
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { Typography, CssBaseline, Grid, Button, TextField, Container } from "@material-ui/core";
+import {
+  Typography,
+  CssBaseline,
+  Grid,
+  Button,
+  TextField,
+  Container,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,20 +28,24 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   form: {
-    width: "100%", 
+    width: "100%",
     marginTop: theme.spacing(3),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: '#16349E',
+    backgroundColor: "#16349E",
   },
   background: {
-    backgroundColor: '#343a40',
-    marginTop: '-40px',
+    backgroundColor: "#343a40",
+    marginTop: "-40px",
   },
   container: {
     backgroundColor: "white",
-  }
+  },
+  header: {
+    backgroundColor: "black",
+    width: "auto auto",
+  },
 }));
 
 const CssTextField = withStyles({
@@ -64,7 +75,15 @@ const Form = () => {
 
   return (
     <div className={classes.background}>
-      <Container id="form-container" component="main" maxWidth="xs" className={classes.container}>
+      <h1 className={classes.header}>
+        I would love to get in contact with you!
+      </h1>
+      <Container
+        id="form-container"
+        component="main"
+        maxWidth="xs"
+        className={classes.container}
+      >
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
