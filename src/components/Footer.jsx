@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 const Footer = () => {
   return (
-    <div>
+    <div id="footer">
       <IconButton target="_blank" href="https://www.linkedin.com/in/isaiah-murray-36b906121/">
         <LinkedInIcon fontSize="large" color="primary" />
       </IconButton>

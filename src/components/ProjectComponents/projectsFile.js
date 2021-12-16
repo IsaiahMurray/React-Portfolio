@@ -12,8 +12,9 @@ import note from "../../assets/notepad.png";
 import sounds from "../../assets/sounds.png";
 import LC from '../../assets/LC.png';
 import journal from '../../assets/read-book.jpg';
-import bookmark from '../../assets/bookmark.jpg'
-import animation from '../../assets/animation.png'
+import bookmark from '../../assets/bookmark.jpg';
+import animation from '../../assets/animation.png';
+import joke from '../../assets/joke.png';
 
 const Projects = [
   {
@@ -117,6 +118,16 @@ const Projects = [
     repo: "https://github.com/IsaiahMurray/Animated-Template",
     tags: ["HTML/CSS"],
     type: "JavaScript"
+  },
+  {
+    title: "Joke Teller",
+    description: "An app the uses a text-to-talk api to tell you really bad coding jokes!",
+    image: joke,
+    page: "https://isaiahmurray.github.io/Vocal-Joke-Teller/",
+    repo: "https://github.com/IsaiahMurray/Vocal-Joke-Teller",
+    tags: ["JavaScript"],
+    type: "JavaScript"
+    
   },
   {
     title: "Transforming Sharingan",
