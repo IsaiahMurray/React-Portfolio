@@ -121,7 +121,7 @@ const Projects = [
   },
   {
     title: "Joke Teller",
-    description: "An app the uses a text-to-talk api to tell you really bad coding jokes!",
+    description: "An app that uses VoiceRSS text-to-talk api to tell you really bad programming jokes!",
     image: joke,
     page: "https://isaiahmurray.github.io/Vocal-Joke-Teller/",
     repo: "https://github.com/IsaiahMurray/Vocal-Joke-Teller",
