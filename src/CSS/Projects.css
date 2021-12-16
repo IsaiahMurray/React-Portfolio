@@ -1,5 +1,6 @@
 #project-div{
     background-color: #343a40;
+    margin-top: -40px;
 }
 
 #projects{
@@ -8,5 +9,4 @@
 .project{
     height: 200px;
     width: 200px;
-    margin: 5%;
 }

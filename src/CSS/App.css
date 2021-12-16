@@ -10,5 +10,9 @@
 
 .App {
   text-align: center;
-  background-color: #343a40;
+  background-color: transparent;
+}
+
+h1{
+  color: snow;
 }

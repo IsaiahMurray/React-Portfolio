@@ -15,7 +15,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 const Skills = () => {
   return (
-    <div>
+    <div id="skills-div">
       <Tooltip title="CSS 3" arrow>
         <IconButton aria-label="CSS 3">
           <FaCss3Alt size="50px" color="white" />

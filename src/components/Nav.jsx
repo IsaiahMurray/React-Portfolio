@@ -21,7 +21,7 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-item nav-link active" href="#jumbotron">
-              Home <span className="sr-only">(current)</span>
+              Home
             </a>
             <a className="nav-item nav-link js-scroll-trigger" href="#about">
               About

@@ -1,28 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Zoom from "@material-ui/core/Zoom";
-import ProjectCard from "./ProjectCard";
-
 import {
+  Zoom,
+  Paper,
+  Box,
+  Modal,
   Button,
-  CardMedia,
-  CardContent,
-  CardActions,
+  Fade,
   Typography,
   Card,
-  Box,
-  Paper,
-  IconButton,
-} from "@material-ui/core";
-
-//image import
-import sharingan from "../../assets/sharingan.png";
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  CardActions,
+} from "@mui/material/";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
   paper: {
     margin: theme.spacing(3),
     padding: theme.spacing(2),
@@ -35,61 +28,148 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
   },
-  card: {
-    maxWidth: 345,
-  },
   media: {
     height: 160,
   },
+  card: {
+    width: 200,
+    height: 300,
+  },
+  content: {
+    height: 100
+  },
+  modal: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 600,
+    padding: 25,
+    height: 450,
+  },
 }));
 
-const sharinganProject = {
-  title: "Transforming Sharingan",
-  description:
-    "A fun little CSS project I did for my gold badge at Eleven Fifty Academy. I am a big Naruto fan so I really wanted to do this one.",
-  code: "https://codepen.io/Salvation205/pen/QWypRVY",
-  image: sharingan,
-};
-
-const OtherProjects = () => {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+const OtherProjects = (props) => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState({});
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const activate = (project) => {
+    setActive(project);
+    handleOpen();
+  };
+
+  const displayProjects = () => {
+    return props.projects.map((project, index) => {
+      return (
+        <div>
+          <Zoom
+            style={{ transitionDelay: `${index}00ms` }}
+            in={true}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Paper elevation={4} className={classes.paper}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={project.image}
+                    title={project.title}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {project.title}
+                    </Typography>
+                  </CardContent>
+                  <Button onClick={() => activate(project)}>Details</Button>
+                </CardActionArea>
+              </Card>
+            </Paper>
+          </Zoom>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Fade in={open}>
+              <Card className={classes.modal}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={active.image}
+                    title={active.title}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      id="transition-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
+                      {active.title}
+                    </Typography>
+                    <Typography
+                      id="transition-modal-description"
+                      sx={{ mt: 2 }}
+                    >
+                      {active.description}
+                    </Typography>
+                    <CardActions>
+                      {active.page ? (
+                        <Button>
+                          <a href={active.page} target="_blank">
+                            Page
+                          </a>
+                        </Button>
+                      ) : null}
+
+                      <br />
+                      {active.repo ? (
+                        <Button>
+                          <a href={active.repo} target="_blank">
+                            Github Repo
+                          </a>
+                        </Button>
+                      ) : null}
+
+                      <br />
+                      {active.client ? (
+                        <Button>
+                          <a href={active.client} target="_blank">
+                            Github Client Repo
+                          </a>
+                        </Button>
+                      ) : null}
+
+                      <br />
+                      {active.server ? (
+                        <Button>
+                          <a href={active.server} target="_blank">
+                            Github Server Repo
+                          </a>
+                        </Button>
+                      ) : null}
+
+                      <br />
+                    </CardActions>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Fade>
+          </Modal>
+        </div>
+      );
+    });
+  };
+
   return (
     <div>
       <div className={classes.container}>
         <Box display="flex" flexWrap="wrap" justifyContent="center">
-          {/* 
-      <Zoom in={true} mountOnEnter unmountOnExit>
-        <Paper elevation={4} className={classes.paper}>
-          <ProjectCard {...sharinganProject}/>
-        </Paper>
-      </Zoom> */}
-
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="140"
-              image={sharingan}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Name
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Description
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Page</Button>
-              <Button size="small">Client Repo</Button>
-              <Button size="small">Server Repo</Button>
-            </CardActions>
-          </Card>
+          {displayProjects()}
         </Box>
       </div>
     </div>
