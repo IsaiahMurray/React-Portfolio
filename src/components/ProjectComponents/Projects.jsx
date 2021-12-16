@@ -1,12 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Container } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
+import { Container, Typography, AppBar, Tab, Tabs, Box} from "@material-ui/core";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Box from "@material-ui/core/Box";
 import JSProjects from "./JSProjects";
 import OtherProjects from "./OtherProjects";
 import CSProjects from "./CSProjects";
