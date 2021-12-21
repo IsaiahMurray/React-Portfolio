@@ -11,6 +11,7 @@ import sharingan from "../../assets/sharingan.png";
 import note from "../../assets/notepad.png";
 import sounds from "../../assets/sounds.png";
 import LC from '../../assets/LC.png';
+import booklist from '../../assets/booklist.jpg';
 
 const Projects = [
   {
@@ -123,6 +124,13 @@ const Projects = [
   description: 'A web application for creating and managing recipes and ingredients for any who would find it usefull. Built using ASP.NET MVC for front and back end functionality.',
   repo: 'https://github.com/IsaiahMurray/LilChef',
   image: LC,
+  tags: ["C#", "ASP.Net Framework", "Razor"]
+},
+{
+  title: "Book List",
+  description: "A razor app to keep track of your books. Made using .NET Core MVC 5. Not deployed.",
+  repo: "https://github.com/IsaiahMurray/BookList",
+  image: booklist,
   tags: ["C#", "ASP.Net Framework", "Razor"]
 }
 ];
